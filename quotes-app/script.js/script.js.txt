@@ -1,0 +1,50 @@
+/* script.js */
+const customQuotes = [
+    { ang: 1, quote: "Ik Onkar, Sat Naam, Karta Purakh, Nirbhau, Nirvair, Akaal Moorat, Ajooni, Saibhang, Gur Prasad." },
+    { ang: 4, quote: "By thinking, deep thoughts, one cannot obtain enlightenment. It is only through the Guru’s grace that the Truth is realized." },
+    { ang: 12, quote: "The Name of the Lord is a jewel, a ruby. It is obtained only by His Grace." },
+    { ang: 26, quote: "O my mind, keep the company of the Holy, all sins shall be eradicated." },
+    { ang: 45, quote: "Meditate on the Lord’s Name, and you shall find eternal peace." },
+    { ang: 62, quote: "He Himself is the Love, He Himself is the Embrace, and He Himself is the One who knows all." },
+    { ang: 78, quote: "Through selfless service, eternal peace is obtained." },
+    { ang: 89, quote: "Those who meditate on the Lord with sincere devotion are blessed with divine understanding." },
+    { ang: 102, quote: "Without the Lord’s Name, life is worthless and empty." },
+    { ang: 120, quote: "With truth and contentment, the body becomes pure." },
+    { ang: 136, quote: "By Guru’s Grace, one remains absorbed in the Lord’s Name." },
+    { ang: 150, quote: "The Lord’s Name is the only support for this world and the next." },
+    { ang: 173, quote: "The mind is soothed, and all suffering departs, when one sings the praises of the Lord." },
+    { ang: 190, quote: "Those who enshrine the Lord in their hearts find everlasting peace." },
+    { ang: 214, quote: "Sing the praises of the Lord and you shall be freed from the cycle of birth and death." },
+    { ang: 239, quote: "Through good deeds, one finds honor and peace in the Lord’s Court." },
+    { ang: 265, quote: "Meditate on the Lord’s Name with love, and all your desires shall be fulfilled." },
+    { ang: 271, quote: "The Lord Himself forgives and unites us with Himself." },
+    { ang: 299, quote: "One who seeks the company of the Holy, all sins are eradicated." },
+    { ang: 310, quote: "One who understands the Lord’s Name is blessed with the highest wisdom." },
+    { ang: 330, quote: "With devotion and love, remember the Lord’s Name and attain liberation." },
+    { ang: 365, quote: "With love and devotion, meditate on the Lord and attain liberation." },
+    { ang: 389, quote: "One who serves the Lord finds true peace." },
+    { ang: 402, quote: "The Lord’s Name is the true treasure of life." },
+    { ang: 420, quote: "One who sings the praises of the Lord is forever blessed." },
+    { ang: 435, quote: "The Lord is the protector of the humble and the weak." },
+    { ang: 450, quote: "Those who love the Lord remain forever in bliss." },
+    { ang: 478, quote: "He Himself is the Creator, and He Himself is the Enjoyer." },
+    { ang: 501, quote: "In the Lord’s Name, all pain and suffering vanish." },
+    { ang: 515, quote: "Those who meditate on the Lord attain supreme peace and wisdom." },
+    { ang: 535, quote: "Through devotion, one attains liberation and divine realization." },
+    { ang: 550, quote: "True happiness is found in meditating on the Lord’s Name." },
+    { ang: 575, quote: "With the Lord’s Name in your heart, all fears disappear." },
+    { ang: 590, quote: "The true wealth of life is the remembrance of the Lord." }
+];
+
+function getRandomQuote() {
+    return customQuotes[Math.floor(Math.random() * customQuotes.length)];
+}
+
+function updateQuote() {
+    const quoteData = getRandomQuote();
+    document.querySelector('.ang-number').textContent = `Ang ${quoteData.ang}`;
+    document.querySelector('.quote').textContent = quoteData.quote;
+}
+
+updateQuote();
+setInterval(updateQuote, 5000); // Update quote every 10 seconds
