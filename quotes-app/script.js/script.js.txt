@@ -47,4 +47,5 @@ function updateQuote() {
 }
 
 updateQuote();
-setInterval(updateQuote, 5000); // Update quote every 10 seconds
+setInterval(updateQuote, 5000); // Update quote every 5 seconds
+
